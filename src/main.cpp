@@ -1,7 +1,3 @@
-//  Copyright (c) 2020 Antoine Tran Tan
-//
-
-#include "my_header.h"
 #define SDL_MAIN_HANDLED
 #include "SDL/sdl.h"
 

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.1)
 cmake_policy(SET CMP0074 NEW)
 
-project (GL C CXX)
+project (project C CXX)
 
 enable_testing()
 

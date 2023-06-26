@@ -1,4 +1,4 @@
-# Add executable called "GL_exe" that is built from the source files
+# Add executable called "SDLProject_exe" that is built from the source files
 # The extensions are automatically found.
 
 file(GLOB_RECURSE sources
@@ -6,7 +6,7 @@ file(GLOB_RECURSE sources
     "*.cpp"
 )
 
-add_executable(GL_exe ${sources})
+add_executable(SDLProject_exe ${sources})
 
 # Link to math library if compiler is gnu
 if ("${CMAKE_C_COMPILER_ID}" STREQUAL "GNU")
@@ -15,15 +15,15 @@ endif()
 
 # Link to user libraries (if there are any)
 if(libraries)
-    target_link_libraries(GL_exe ${libraries})
+    target_link_libraries(SDLProject_exe ${libraries})
 endif()
 
-target_link_libraries(GL_exe ${Boost_LIBRARIES})
+target_link_libraries(SDLProject_exe ${Boost_LIBRARIES})
 
-install( TARGETS GL_exe
+install( TARGETS SDLProject_exe
     RUNTIME DESTINATION bin
     LIBRARY DESTINATION lib
     ARCHIVE DESTINATION lib
 )
 
-add_test(NAME test_GL_exe COMMAND GL_exe)
+add_test(NAME test_SDLProject_exe COMMAND SDLProject_exe)
